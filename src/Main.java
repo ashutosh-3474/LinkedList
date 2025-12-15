@@ -17,6 +17,8 @@ public class Main {
         ll.addNode(10);
         ll.appendNode(11);
         ll.insertAfter(70, 15);
+        ll.display();
+        ll.deleteFirstNode();
 
         ll.display();
     }
