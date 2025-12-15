@@ -3,5 +3,17 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to the linked list program");
+
+        LinkedList ll = new LinkedList();
+
+        Node first = new Node(56);
+        Node second = new Node(30);
+        Node third = new Node(70);
+
+        ll.head = first;
+        first.next = second;
+        second.next = third;
+
+        ll.display();
     }
 }
