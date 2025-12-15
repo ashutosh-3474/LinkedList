@@ -14,6 +14,8 @@ public class Main {
         first.next = second;
         second.next = third;
 
+        ll.addNode(10);
+
         ll.display();
     }
 }

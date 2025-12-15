@@ -13,4 +13,12 @@ public class LinkedList {
         }
         System.out.print("NULL");
     }
+
+    //Method to add new to node at the beginning and update the head of the linked list
+    public  void addNode(int data)
+    {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
 }
