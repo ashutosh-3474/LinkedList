@@ -34,11 +34,28 @@ public class LinkedList {
             return;
         }
 
-        // Traverse till last node
+        //Traverse till last node
         Node temp = head;
         while (temp.next != null) {
             temp = temp.next;
         }
         temp.next = newNode;
+    }
+
+    //Method to insert node in between of 2 nodes in the linked list
+    public void insertAfter(int key, int data) {
+        Node temp = head;
+
+        // Search for the node with given key
+        while (temp != null && temp.data != key) {
+            temp = temp.next;
+        }
+
+        // If key is found, insert new node
+        if (temp != null) {
+            Node newNode = new Node(data);
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
     }
 }
