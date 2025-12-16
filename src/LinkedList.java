@@ -99,4 +99,18 @@ public class LinkedList {
             System.out.println("Last node deleted successfully");
         }
     }
+
+    //Method to search for an element in the linked list, returns node if found, else null
+    public Node search(int key){
+        Node temp = head;
+        while(temp != null)
+        {
+            if (temp.data == key)
+            {
+                return temp;
+            }
+            temp = temp.next;
+        }
+        return null;
+    }
 }

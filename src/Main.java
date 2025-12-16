@@ -22,5 +22,6 @@ public class Main {
         ll.display();
         ll.deleteLastNode();
         ll.display();
+        System.out.println("search for 30: " + ll.search(30));
     }
 }
