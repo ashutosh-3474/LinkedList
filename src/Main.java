@@ -14,19 +14,31 @@ public class Main {
         first.next = second;
         second.next = third;
 
-//        ll.addNode(10);
-//        ll.appendNode(11);
-//        ll.insertAfter(70, 15);
-//        ll.display();
-//        ll.deleteFirstNode();
-//        ll.display();
-//        ll.deleteLastNode();
-//        ll.display();
-//        System.out.println("search for 30: " + ll.search(30));
+        ll.addNode(10);
+        ll.appendNode(11);
+        ll.insertAfter(70, 15);
+        ll.display();
+        ll.deleteFirstNode();
+        ll.display();
+        ll.deleteLastNode();
+        ll.display();
+        System.out.println("search for 30: " + ll.search(30));
 
         ll.insertAfter(30, 40);
         ll.display();
         ll.delete(70);
         ll.display();
+
+
+        OrderedLinkedList<Integer> list = new OrderedLinkedList<>();
+
+        list.add(30);
+        list.display();
+        list.add(20);
+        list.display();
+        list.add(25);
+        list.display();
+        list.add(35);
+        list.display();
     }
 }

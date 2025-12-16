@@ -47,7 +47,7 @@ public class LinkedList {
         Node temp = head;
 
         // Search for the node with given key
-        while (temp != null && temp.data != key) {
+        while (temp != null && temp.data.compareTo(key) == 0) {
             temp = temp.next;
         }
 
@@ -105,7 +105,7 @@ public class LinkedList {
         Node temp = head;
         while(temp != null)
         {
-            if (temp.data == key)
+            if (temp.data.compareTo(key) == 0)
             {
                 return temp;
             }
@@ -117,7 +117,7 @@ public class LinkedList {
     //Method to delete a node from the linked list
     public void delete(int key)
     {
-        if (head.data == key)
+        if (head.data.compareTo(key) == 0)
         {
             head = head.next;
             System.out.println("Node deleted successfully");
@@ -128,7 +128,7 @@ public class LinkedList {
 
         while(cur != null)
         {
-            if (cur.data == key)
+            if (cur.data.compareTo(key) == 0)
             {
                 pre.next = cur.next;
                 System.out.println("Node deleted successfully");
