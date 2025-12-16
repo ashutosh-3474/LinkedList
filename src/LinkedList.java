@@ -1,31 +1,31 @@
 //Linked list class, stores the head and methods to manipulate the linked list
-public class LinkedList {
-    Node head;  //head of the linked list
+public class LinkedList<T extends Comparable<T>> {
+    Node<T> head;  //head of the linked list
 
     //Method to print the linked list
     public void display()
     {
-        Node cur = head;
+        Node<T> cur = head;
         while(cur != null)
         {
             System.out.print(cur.data + "->");
             cur = cur.next;
         }
-        System.out.print("NULL");
+        System.out.println("NULL");
     }
 
     //Method to add new to node at the beginning and update the head of the linked list
-    public void addNode(int data)
+    public void addNode(T data)
     {
-        Node newNode = new Node(data);
+        Node<T> newNode = new Node<>(data);
         newNode.next = head;
         head = newNode;
     }
 
     //Method to append node at the end of the linked list
-    public void appendNode(int data)
+    public void appendNode(T data)
     {
-        Node newNode = new Node(data);
+        Node<T> newNode = new Node<>(data);
 
         // If list is empty, new node becomes head
         if (head == null)
@@ -35,7 +35,7 @@ public class LinkedList {
         }
 
         //Traverse till last node
-        Node temp = head;
+        Node<T> temp = head;
         while (temp.next != null) {
             temp = temp.next;
         }
@@ -43,8 +43,8 @@ public class LinkedList {
     }
 
     //Method to insert node in between of 2 nodes in the linked list
-    public void insertAfter(int key, int data) {
-        Node temp = head;
+    public void insertAfter(T key, T data) {
+        Node<T> temp = head;
 
         // Search for the node with given key
         while (temp != null && temp.data.compareTo(key) == 0) {
@@ -53,7 +53,7 @@ public class LinkedList {
 
         // If key is found, insert new node
         if (temp != null) {
-            Node newNode = new Node(data);
+            Node<T> newNode = new Node<>(data);
             newNode.next = temp.next;
             temp.next = newNode;
         }
@@ -69,7 +69,6 @@ public class LinkedList {
             return;
         }
 
-        Node temp = head;
         head = head.next;
         System.out.println("First node deleted successfully");
     }
@@ -90,7 +89,7 @@ public class LinkedList {
         }
         else
         {
-            Node temp = head;
+            Node<T> temp = head;
             while(temp.next.next != null)
             {
                 temp = temp.next;
@@ -101,8 +100,8 @@ public class LinkedList {
     }
 
     //Method to search for an element in the linked list, returns node if found, else null
-    public Node search(int key){
-        Node temp = head;
+    public Node<T> search(T key){
+        Node<T> temp = head;
         while(temp != null)
         {
             if (temp.data.compareTo(key) == 0)
@@ -115,7 +114,7 @@ public class LinkedList {
     }
 
     //Method to delete a node from the linked list
-    public void delete(int key)
+    public void delete(T key)
     {
         if (head.data.compareTo(key) == 0)
         {
@@ -123,8 +122,8 @@ public class LinkedList {
             System.out.println("Node deleted successfully");
             return;
         }
-        Node cur = head.next;
-        Node pre = head;
+        Node<T> cur = head.next;
+        Node<T> pre = head;
 
         while(cur != null)
         {

@@ -4,11 +4,11 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to the linked list program");
 
-        LinkedList ll = new LinkedList();
+        LinkedList<Integer> ll = new LinkedList<>();
 
-        Node first = new Node(56);
-        Node second = new Node(30);
-        Node third = new Node(70);
+        Node<Integer> first = new Node<>(56);
+        Node<Integer> second = new Node<>(30);
+        Node<Integer> third = new Node<>(70);
 
         ll.head = first;
         first.next = second;
@@ -28,6 +28,11 @@ public class Main {
         ll.display();
         ll.delete(70);
         ll.display();
+
+        LinkedList<String> ll_string= new LinkedList<>();
+        ll_string.addNode("A");
+        ll_string.addNode("B");
+        ll_string.display();
 
 
         OrderedLinkedList<Integer> list = new OrderedLinkedList<>();
