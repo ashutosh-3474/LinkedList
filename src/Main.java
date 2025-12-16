@@ -26,5 +26,7 @@ public class Main {
 
         ll.insertAfter(30, 40);
         ll.display();
+        ll.delete(70);
+        ll.display();
     }
 }

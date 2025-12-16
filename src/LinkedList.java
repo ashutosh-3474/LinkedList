@@ -113,4 +113,31 @@ public class LinkedList {
         }
         return null;
     }
+
+    //Method to delete a node from the linked list
+    public void delete(int key)
+    {
+        if (head.data == key)
+        {
+            head = head.next;
+            System.out.println("Node deleted successfully");
+            return;
+        }
+        Node cur = head.next;
+        Node pre = head;
+
+        while(cur != null)
+        {
+            if (cur.data == key)
+            {
+                pre.next = cur.next;
+                System.out.println("Node deleted successfully");
+                return;
+            }
+            pre = cur;
+            cur = cur.next;
+        }
+        System.out.println("Unable to delete, key not found");
+
+    }
 }
