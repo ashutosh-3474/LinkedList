@@ -47,7 +47,7 @@ public class LinkedList<T extends Comparable<T>> {
         Node<T> temp = head;
 
         // Search for the node with given key
-        while (temp != null && temp.data.compareTo(key) == 0) {
+        while (temp != null && temp.data.compareTo(key) != 0) {
             temp = temp.next;
         }
 
