@@ -62,6 +62,7 @@ public class LinkedList {
     //Method to delete first node of the linked list
     public void deleteFirstNode()
     {
+        //checks if list is empty
         if (head == null)
         {
             System.out.println("List is already empty");
@@ -71,5 +72,31 @@ public class LinkedList {
         Node temp = head;
         head = head.next;
         System.out.println("First node deleted successfully");
+    }
+
+    //Method to delete last node from the linked list
+    public void deleteLastNode()
+    {
+        if (head == null)   //check if list is empty
+        {
+            System.out.println("List is empty");
+            return;
+        }
+        else if (head.next == null) //only single node is present in the linked list
+        {
+            head = null;
+            System.out.println("Last node deleted successfully");
+            return;
+        }
+        else
+        {
+            Node temp = head;
+            while(temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+            System.out.println("Last node deleted successfully");
+        }
     }
 }
